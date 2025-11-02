@@ -1,52 +1,106 @@
-# Predicting Customer Churn — Telco Customer Churn Dataset
+# 📊 Predicting Customer Churn — Telco Customer Churn Project
 
-## 📌 Overview  
-This project is part of the **Machine Learning/AI Engineer Foundations** portfolio.  
-The objective is to prepare a business-analytics dataset for machine learning modelling, explore the data, build a predictive model, and derive actionable insights for customer retention in a telecommunications company.
+## 📌 Overview
+This project is part of the **Machine Learning/AI Engineer Foundations** portfolio. The goal is
+to analyze and predict customer churn for a telecommunications company using a real business
+dataset from Kaggle.
 
-## 🎯 Project Scope  
-### ✅ Goals  
-- Predict which customers are likely to churn (i.e., leave the company)  
-- Identify key drivers of churn to inform retention strategies  
-- Demonstrate data-preparation, analysis, and modelling skills in an ML workflow  
+Reducing churn is critical in subscription-based industries where retaining customers is
+more cost-effective than acquiring new ones. This project demonstrates a complete end-to-end
+machine learning workflow:
 
-### 📊 Data  
-- **Dataset:** Telco Customer Churn Dataset  
-- **Source:** Kaggle – [Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)  
-- **Format:** CSV  
-- **Description:** Customer account information for a telecom operator, including demographic, usage and account-service attributes, with a target variable `Churn` indicating whether the customer left.  
+- Data Cleaning ✅
+- Exploratory Data Analysis ✅
+- Feature Engineering ✅
+- Machine Learning Model ✅
+- Business Insights ✅
 
-Some of the variables include:  
-| Column | Description |
+---
+
+## 🎯 Objectives
+- Predict which customers are likely to churn
+- Identify the most important churn risk factors
+- Provide data-driven business recommendations
+- Showcase ML and data analytics skills in a portfolio-ready project
+
+---
+
+## 📊 Dataset
+**Source:** https://www.kaggle.com/datasets/blastchar/telco-customer-churn
+**Rows:** 7,043 customers  
+**Columns:** 21 customer, service, and billing attributes  
+
+Examples of predictor variables:
+
+| Feature | Description |
 |--------|-------------|
-| `customerID` | Unique customer identifier |
-| `gender` | Male/Female |
-| `SeniorCitizen` | 0 = No, 1 = Yes |
-| `Partner` | Whether the customer has a partner |
-| `tenure` | Number of months the customer has been with the company |
-| `MonthlyCharges` | Customer’s monthly bill |
-| `TotalCharges` | The total amount charged to the customer |
-| `Churn` | Target: Yes/No |
+| `tenure` | Months with the company |
+| `MonthlyCharges` | Monthly bill amount |
+| `InternetService` | DSL / Fiber optic / None |
+| `PaymentMethod` | Electronic check, credit card, etc. |
+| `Partner`, `Dependents` | Customer family context |
+| `Contract` | Month-to-month, one-year, two-year |
+| `Churn` | Target label — Yes or No |
 
-### 🔍 Analysis Plan 
-1. Load and inspect the dataset (shape, types, first rows)
-2. Identify missing values and fix incorrect or inconsistent data
-3. Explore the data using summary statistics and visualizations
-4. Prepare the dataset for machine learning:
-   - Encode categorical columns as numbers
-   - Scale numeric columns if needed
-5. Train **one simple baseline model** (Logistic Regression)
-6. Review results and summarize what we learned
+---
 
+## 🧠 Machine Learning Workflow
 
-*Scope may evolve as insights emerge during the project.*
+1️⃣ Load and inspect data  
+2️⃣ Clean missing and incorrect values  
+3️⃣ Convert categorical variables → numeric (one-hot encoding)  
+4️⃣ Split into training/testing sets  
+5️⃣ Train a **Logistic Regression** model  
+6️⃣ Evaluate performance on unseen data  
+7️⃣ Communicate insights with business value
 
-## 🛠️ Tools & Technologies  
-- Python  
-- Pandas, NumPy  
-- Matplotlib, Seaborn  
-- Scikit-learn  
-- Jupyter Notebook  
-- Git & GitHub  
+---
+
+## 🔍 Key EDA Insights
+
+Customers are more likely to churn if they:
+- Have **month-to-month contracts**
+- Use **fiber optic** internet services
+- Pay by **electronic check**
+- Have **lower tenure** (newer customers)
+- Have **no partner** and **no dependents**
+
+👉 These customers should be prioritized for retention efforts.
+
+---
+
+## 🤖 Model Performance
+
+| Metric | Result |
+|--------|-------|
+| Accuracy | ~79% |
+| Recall for Churn | 52% |
+| Confusion Matrix |
+
+✅ Strong baseline  
+⚠ Model misses some churners → improvement opportunity
+
+---
+
+## 💡 Business Recommendations
+
+To reduce churn, the telecom company should:
+- Offer **long-term contract upgrades** for new customers
+- Improve satisfaction for **fiber optic** users
+- Encourage **automatic payment methods**
+- Target **young, single** customers with loyalty/discount programs  
+- Provide retention support earlier in the customer lifecycle
+
+These actions can improve customer lifetime value and revenue retention.
+
+---
+
+## 🛠️ Tools & Technologies
+- Python (Jupyter Notebook)
+- Pandas, NumPy
+- Matplotlib, Seaborn
+- Scikit-learn (Logistic Regression)
+- Git & GitHub
+
 
 
